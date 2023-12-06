@@ -1,38 +1,10 @@
 # Fitness_Guide-FastAPI
 
-Getting Started
+# FastAPI Web Application Example
 
-This code is the best classical example for making and web app using python fastapi.
+Welcome to the FastAPI Web Application example! This code serves as an excellent classical illustration of building a web app using Python and FastAPI. Follow the steps below to set up and run the application:
 
-Prerequisites
-
-Before you begin, you will need to install the following dependencies:
-
-Virtualenv: A tool for creating isolated Python environments.
-Installation
-
-Create a virtual environment:
-Bash
-pip install virtualenv
-virtualenv myev
-Use code with caution. Learn more
-Activate the virtual environment:
-Bash
-# For Windows
-myev/Scripts/activate.ps1
-
-# For Linux or macOS
-source ./myev/bin/activate
-Use code with caution. Learn more
-Install the dependencies:
-Bash
-pip install -r requirements.txt
-Use code with caution. Learn more
-Running the Code
-
-To run the code, execute the following command:
-
-Bash
-uvicorn main:app --host 0.0.0.0 --port 8000 --reload
-Use code with caution. Learn more
-This will start the web app on your local machine at http://localhost:8000.
+1. Install the virtual environment package:
+   ```bash
+   pip install virtualenv
+'''
