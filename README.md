@@ -20,6 +20,7 @@ Welcome to the FastAPI Web Application example! This code serves as an excellent
    ```bash
    pip install -r requirements.txt
 
+
 5. Run the FastAPI application with the following command::
    ```bash
    uvicorn main:app --host 0.0.0.0 --port 8000 --reload
