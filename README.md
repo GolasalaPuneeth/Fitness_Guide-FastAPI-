@@ -13,13 +13,13 @@ Welcome to the FastAPI Web Application example! This code serves as an excellent
    virtualenv myenv
    
 3. Activate the virtual environment (for Windows):
-      ```bash
+   ```bash
    myenv\Scripts\activate
 
 4.Install dependencies from the **requirements**.txt file:
-      ```bash
+   ```bash
    pip install -r requirements.txt
 
 5. Run the FastAPI application with the following command::
-         ```bash
+   ```bash
    uvicorn main:app --host 0.0.0.0 --port 8000 --reload
