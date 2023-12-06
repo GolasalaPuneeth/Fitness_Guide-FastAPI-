@@ -16,10 +16,9 @@ Welcome to the FastAPI Web Application example! This code serves as an excellent
    ```bash
    myenv\Scripts\activate
 
-4.Install dependencies from the **requirements**.txt file:
+4. Install dependencies from the **requirements**.txt file:
    ```bash
    pip install -r requirements.txt
-
 
 5. Run the FastAPI application with the following command::
    ```bash
