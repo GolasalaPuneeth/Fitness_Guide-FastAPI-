@@ -23,13 +23,10 @@ app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
-
-
 @app.get("/")
 async def welcome(request :Request):
     #data = templates.TemplateResponse("index.html",{"request": request})
     return templates.TemplateResponse("index.html",{"request": request})
-
 
 
 @app.post("/users")
