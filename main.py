@@ -5,6 +5,7 @@ from pydantic import BaseModel
 import uvicorn
 import OpenAI_decorator
 from fastapi.responses import HTMLResponse
+import TwilioClient
 
 
 templates = Jinja2Templates(directory="templates")
@@ -25,8 +26,31 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 
 @app.get("/")
 async def welcome(request :Request):
-    #data = templates.TemplateResponse("index.html",{"request": request})
     return templates.TemplateResponse("index.html",{"request": request})
+
+@app.get("/signin")
+async def signinpage(request :Request):
+    return templates.TemplateResponse("signin.html",{"request": request})
+
+@app.post("/signin")
+async def signin(request :Request, SignInFirstName :str = Form(...), SignInLastName: str = Form(...),  Email: str =Form(...), country: str=Form(...), number: int =Form(...), Gender: str =Form(...)):
+    print(SignInFirstName)
+    print(SignInLastName)
+    print(Email)
+    print(country)
+    print(number)
+    print(Gender)
+    OTP = 1242342 #TwilioClient.sendOTP(number)
+    print(OTP)
+    return templates.TemplateResponse("OTP.html",{"request": request,"OTP":OTP})
+
+@app.get("/BasicPlan")
+async def basicPlan(request :Request):
+    return templates.TemplateResponse("login.html",{"request": request})
+
+@app.get("/validator")
+async def validator(request :Request, OTP:str = Form(...)):
+    return {"status":"scuss"}#templates.TemplateResponse("login.html",{"request": request})
 
 
 @app.post("/users")
